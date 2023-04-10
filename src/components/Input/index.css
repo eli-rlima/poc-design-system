@@ -1,0 +1,59 @@
+.input {
+    top: 1rem;
+    display: flex;
+    row-gap: 0.125rem;
+    position: relative;
+}
+
+.input input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid gray;
+}
+
+.input label {
+    top: 0;
+    position: absolute;
+    transition: top 0.2s;
+}
+
+.filled input {
+    border-bottom: 1px solid green;
+}
+
+.filled label {
+    color: green;
+    top: -1em;
+}
+
+.error label {
+    color: red;
+}
+
+.error input {
+    border-bottom: 1px solid red;
+}
+
+.input input:focus {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid green;
+}
+
+.input input:focus + label {
+    color: green;
+    top: -1em;
+}
+
+.input input:hover + label {
+    top: -1em;
+}
+
+.input label:hover {
+    top: -1em;
+}
